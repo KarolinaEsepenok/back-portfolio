@@ -27,7 +27,7 @@ app.post('/', async function (req, res) {
     const {name, email, subject, message} = req.body
     const mailOptions = {
         from: name, // sender address
-        to: smtp_receivers_email, // list of receivers
+        to: 'karolinaesepenok@gmail.com', // list of receivers
         subject: subject, // subject line
         html: `<h1>New message from HR!</h1>
 <div>You have new message from <b>${email}</b>: ${message}</div>`// plain text body
