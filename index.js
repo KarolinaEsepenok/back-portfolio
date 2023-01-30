@@ -11,12 +11,12 @@ app.use(bodyParser.json())
 const port = 5001
 
 
-const smtp_login = 'karolinaesepenok@gmailcom'
-const smtp_password = 'lqwjrywzqyiicfsi'
-const smtp_receivers_email = 'itincubatorkarolina1992@gmail.com'
-//const smtp_login = process.env.SMTP_LOGIN
-//const smtp_password = process.env.SMTP_PASSWORD
-//const smtp_receivers_email = process.env.SMTP_RECEIVERS_EMAIL
+//const smtp_login = 'karolinaesepenok@gmailcom'
+// const smtp_password = 'lqwjrywzqyiicfsi'
+// const smtp_receivers_email = 'itincubatorkarolina1992@gmail.com'
+const smtp_login = process.env.SMTP_LOGIN
+const smtp_password = process.env.SMTP_PASSWORD
+const smtp_receivers_email = process.env.SMTP_RECEIVERS_EMAIL
 
 let transporter = nodemailer.createTransport({
     service: 'gmail',
