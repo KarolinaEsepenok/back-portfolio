@@ -12,7 +12,7 @@ const port = 5001
 
 
 const smtp_login = 'karolinaesepenok@gmailcom'
-const smtp_password = 'REDSlim1992Hi'
+const smtp_password = 'lqwjrywzqyiicfsi'
 const smtp_receivers_email = 'itincubatorkarolina1992@gmail.com'
 //const smtp_login = process.env.SMTP_LOGIN
 //const smtp_password = process.env.SMTP_PASSWORD
@@ -21,8 +21,8 @@ const smtp_receivers_email = 'itincubatorkarolina1992@gmail.com'
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: smtp_login, //test account
-        pass: smtp_password // password from 2FA
+        user: smtp_login,
+        pass: smtp_password
     }
 })
 
