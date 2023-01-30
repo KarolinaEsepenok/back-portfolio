@@ -8,7 +8,7 @@ const app = express()
 app.use(cors())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
-const port = 3010
+const port = 5000
 
 
 const smtp_login = 'karolinaesepenok@gmailcom'
