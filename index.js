@@ -10,15 +10,15 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 const port = 3010
 
-//const smtp_login = process.env.SMTP_LOGIN
-//const smtp_password = process.env.SMTP_PASSWORD
+const smtp_login = process.env.SMTP_LOGIN
+const smtp_password = process.env.SMTP_PASSWORD
 const smtp_receivers_email = process.env.SMTP_RECEIVERS_EMAIL
 
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user:'karolinaesepenok@gmail.com', //test account
-        pass: 'REDSlim1992Hi'// password from 2FA
+        user: smtp_login, //test account
+        pass: smtp_password // password from 2FA
     }
 })
 
@@ -27,7 +27,7 @@ app.post('/', async function (req, res) {
     const {name, email, subject, message} = req.body
     const mailOptions = {
         from: name, // sender address
-        to: 'karolinaesepenok@gmail.com', // list of receivers
+        to: smtp_receivers_email, // list of receivers
         subject: subject, // subject line
         html: `<h1>New message from HR!</h1>
 <div>You have new message from <b>${email}</b>: ${message}</div>`// plain text body
